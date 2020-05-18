@@ -1,0 +1,53 @@
+.stock-wrapper{margin-top:-136px;border-top:1px solid #332f85;padding-top:23px;padding-bottom:26px;position:relative;transition:background .5s ease-in;background:#1c1777}
+.stock-wrapper.active-map::after{content:"";background:#171360;height:100%;position:absolute;top:0;right:0;z-index:9;transition:background .5s ease-in}
+.right-wrap .map-icon:before{z-index:1}
+.right-wrap .map-icon:after{content:'';mix-blend-mode:screen;position:absolute;top:29px;left:29px;width:16px;height:16px;background:rgba(255,255,255,1);opacity:0;z-index:0;animation:ripple-new 1s ease-out infinite;animation-delay:1s;border-radius:100%;transform-origin:50% 50%}
+@keyframes ripple-new{0{transform:scale(0);opacity:1}
+30%{transform:scale(1.5);opacity:.8}
+100%{opacity:0;transform:scale(4)}
+}
+@keyframes ripple{0{transform:scale(0,0);opacity:1}
+20%{transform:scale(15,15);opacity:1}
+100%{opacity:0;transform:scale(30,30)}
+}
+.left-wrap{padding-left:0;width:75%;float:left;padding-left:15px}
+.left-wrap .item-box li{width:auto;padding:0 52px 0 52px;position:relative;display:inline-block;vertical-align:top;top:10px}
+.left-wrap .item-box li::before{content:'';position:absolute;top:10px;left:5%;-webkit-transform:translateX(-50%);transform:translateX(-50%);width:36px;height:36px;z-index:1}
+.left-wrap .item-box li:first-child::before{background:url('investindialibs/images/svg_icon/registration-startup.svg') no-repeat top center/contain}
+.left-wrap .item-box li:nth-child(2)::before{background:url('investindialibs/images/svg_icon/startup-recognition.svg') no-repeat top center/contain}
+.left-wrap .item-box li:nth-child(3)::before{background:url('investindialibs/images/svg_icon/registration-learning.svg') no-repeat top center/contain}
+.left-wrap .item-box li:nth-child(4)::before{background:url('investindialibs/images/svg_icon/startup-fund.svg') no-repeat top center/contain}
+.left-wrap .item-box li span .flip-counter{display:block;font-size:30px;line-height:50px;color:#fff}
+.left-wrap .item-box li span .flip-counter-horizontal{display:inline-block;font-size:30px;line-height:50px;color:#fff;vertical-align:middle;padding-right:5px}
+.left-wrap .item-box li span .flip-tag{display:block;font-size:12px;line-height:18px;color:#fff;max-width:147px;text-transform:uppercase}
+.left-wrap .item-box li span .flip-tag-horizontal{display:inline-block;font-size:12px;line-height:18px;color:#fff;text-transform:uppercase}
+.right-wrap{width:25%;float:left;padding-right:15px}
+.map-wrapper{text-align:right;position:relative;z-index:99}
+.right-wrap .map-icon{display:inline-block;position:relative;width:74px;height:74px;border-radius:50%;background-color:#1c1777;box-shadow:0 14px 32px 0 rgba(9,41,135,0.65),0 0 9px 0 rgba(207,219,255,0.004),inset 0 0 46px 0 rgba(255,255,255,0.13),inset 0 0 18px 0 rgba(126,141,230,0.68);border-right:1px solid #42d3f4;vertical-align:middle;margin-right:-30px;cursor:pointer}
+.right-wrap .map-icon::before{content:"";display:block;width:44px;height:44px;background:url(investindialibs/images/map-icon.png) no-repeat center center;position:absolute;top:14px;left:18px}
+.right-wrap .more-on-map{background-image:-moz-linear-gradient(47deg,#3297d7 0,#1f78d3 100%);background-image:-webkit-linear-gradient(47deg,#3297d7 0,#1f78d3 100%);background-image:-ms-linear-gradient(47deg,#3297d7 0,#1f78d3 100%);box-shadow:0 3px 29px 0 rgba(12,24,80,0.25);font-size:13px;line-height:50px;color:#fff;display:inline-block;text-align:center;border-radius:0 50px 50px 0;cursor:pointer;transition:all .8s;width:calc(100% - 74px);padding-left:10px}
+.right-wrap .more-on-map:hover{background-image:-webkit-linear-gradient(47deg,#1f78d3 0,#3297d7 100%);background-image:-ms-linear-gradient(47deg,#1f78d3 0,#3297d7 100%)}
+@media(min-width:1400px){.stock-wrapper.active-map::after{width:35%}
+}
+@media(max-width:1399px){.stock-wrapper.active-map::after{width:365px}
+}
+@media(max-width:1270px){.left-wrap{width:60%}
+.right-wrap{width:40%}
+.stock-wrapper.active-map::after{width:50%;display:none}
+.left-wrap .item-box li{padding:0 20px 0 40px}
+.map-wrapper{padding-top:15px}
+}
+@media only screen and (max-width:1060px){.right-wrap{width:100%;float:none;text-align:center;padding-right:0;max-width:400px;margin:0 auto}
+.left-wrap .item-box li span .flip-tag{max-width:100%}
+.left-wrap .item-box li span .flip-counter{font-size:16px;line-height:20px}
+.left-wrap .item-box li span .flip-counter-horizontal{font-size:16px;line-height:20px;padding-right:0}
+.left-wrap .item-box li span{display:block;text-align:center;width:100%}
+.left-wrap .item-box li::before{left:50%;width:20px;height:16px;top:-12px}
+.left-wrap .item-box li{padding:10px;width:49%;margin-bottom:15px}
+.left-wrap{width:100% !important;float:none;padding-left:0}
+.stock-wrapper{margin-top:-186px}
+}
+@media only screen and (max-width:991px){.stock-wrapper{background-color:#1c1777;margin-top:0}
+}
+@media(max-width:479px){.left-wrap .item-box li{padding:10px;width:100%;margin-bottom:15px}
+}
