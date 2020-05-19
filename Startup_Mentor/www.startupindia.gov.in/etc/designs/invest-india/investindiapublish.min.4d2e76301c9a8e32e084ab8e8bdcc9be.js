@@ -1,1 +1,0 @@
-$(document).ready(function(){if(store.getItem("uid")||store.getItem("sihRegisteredUser")){if(store.getItem("no-dashboard")||store.getItem("no-profile"))window.location=$(".notification-container").attr("home-page")}else window.location=$(".notification-container").attr("home-page")});
