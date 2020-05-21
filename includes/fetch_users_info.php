@@ -15,6 +15,7 @@ while($row = $que->fetch(PDO::FETCH_ASSOC)){
     $row_username = $row['Username'];
     $row_email = $row['Email'];
     $row_password = $row['Password'];
+    $row_followernum = $row['followers'];
     $row_user_photo = $row['Userphoto'];
     $row_user_cover_photo = $row['user_cover_photo'];
     $row_school = $row['school'];

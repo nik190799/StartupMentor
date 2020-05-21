@@ -169,7 +169,6 @@ if (filter_var(htmlspecialchars($_GET['u']),FILTER_SANITIZE_STRING) == $row_user
             if($_SESSION['Username'] == $row_username){
                 echo "
                 <div class=\"change_user_photo\">
-
                 <form action=\"\" method=\"post\" enctype=\"multipart/form-data\">
                 <label style='margin:0;'>
                     <p style='margin:0;color: #fff;text-align: center;'><span class=\"fa fa-camera\"></span> ".lang('uploadPhoto')."</p>
@@ -203,9 +202,14 @@ if (filter_var(htmlspecialchars($_GET['u']),FILTER_SANITIZE_STRING) == $row_user
                 $c->bindParam(':row_id',$row_id,PDO::PARAM_INT);
                 $c->execute();
                 $c_num = $c->rowCount();
-                if ($c_num > 0){
+                if ($row_followernum>=2){
+                    echo "<span id='followUnfollow_$row_id' style='cursor:pointer;width:100%;display:inline-flex;'><button class=\"unfollow_btn\" onclick=\"followUnfollow('')\"><span class=\"fa fa-check\"></span> ".lang('busyBtn_str')."</button></span>";
+                }
+                elseif ($c_num > 0){
                     echo "<span id='followUnfollow_$row_id' style='cursor:pointer;width:100%;display:inline-flex;'><button class=\"unfollow_btn\" onclick=\"followUnfollow('$row_id')\"><span class=\"fa fa-check\"></span> ".lang('followingBtn_str')."</button></span>";
-                }else{
+                }
+                
+                else{
                     echo "<span id='followUnfollow_$row_id' style='cursor:pointer;width:100%;display:inline-flex;'><button class=\"follow_btn\" onclick=\"followUnfollow('$row_id')\"><span class=\"fa fa-plus-circle\"></span> ".lang('followBtn_str')."</button></span>";
                 }
                 $sql = "SELECT id FROM r_star WHERE u_id = :uid AND p_id =:pid";

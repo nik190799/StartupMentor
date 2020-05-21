@@ -73,6 +73,7 @@ function lang($txt){
     'uProf_followingTitle1' => 'People that',
     'uProf_followingTitle2' => 'are following',
     'followingBtn_str' => 'Following',
+    'busyBtn_str' => 'Unavailable',
     'followBtn_str' => 'Follow',
     'postDropdown' => 'dropdown-menu-right',
     'postDropdownTxtAlign' => 'left',
